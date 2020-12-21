@@ -26,13 +26,13 @@ public class main {
 		boolean ask_order;
 		String order = new String();
 		int move = -1;
-		System.out.print("Vous etes le joueur numero : " + String.valueOf(manturn) + "\nL'ordinateur est le joueur numero : " + String.valueOf(manturn*-1) + "\n\nPour jouer il faut choisir une colonne entre 1 et 7\n" + env.toString() + "\n");
+		System.out.print("You are the player number : " + String.valueOf(manturn) + "\nComputer is the player number : " + String.valueOf(manturn*-1) + "\n\nTo play you have to choose between the column 1 and 7\n" + env.toString() + "\n");
 
 		while (continue_game){
 			if(env.playerJustMoved != manturn){
 				ask_order = true;
 				while(ask_order){
-					System.out.print("Saisissez une commande : ");
+					System.out.print("Enter an order : ");
 					order = sc.nextLine();
 					if(order.equals("q")){
 						continue_game = false;
@@ -53,10 +53,10 @@ public class main {
 				env.domove(move);
 			}
 			if(order.equals("q")){
-				System.out.print("Vous avez quitté");
+				System.out.print("You left");
 			}
 			else{
-				String str = (manturn == env.playerJustMoved) ? "Vous venez" : "L'ordi viens";
+				String str = (manturn == env.playerJustMoved) ? "You" : "Computer";
 				System.out.print("\n" + env.show(str, move + 1) + "\n");
 			}
 			if(env.getmoves().equals(new ArrayList<Integer>())){
@@ -67,10 +67,10 @@ public class main {
 		if(!order.equals("q")){
 			if(env.value() == 1.0){
 				String str = (manturn == env.playerJustMoved) ? "Man" : "Computer";
-				System.out.print(str + " gagné");
+				System.out.print(str + " wins");
 			}
 			else{
-				System.out.print("Personne n'a gagné");
+				System.out.print("Nobody wins");
 			}
 		}
 		sc.close();
