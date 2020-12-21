@@ -88,7 +88,7 @@ public class connect {
 	}
 
 	public String show(String str, int move){
-		return str + " de jouer la colonne " + String.valueOf(move) + "\n" + this.toString() + "\n";
+		return str + " just played the column " + String.valueOf(move) + "\n" + this.toString() + "\n";
 	}
 
 	public double value(){
