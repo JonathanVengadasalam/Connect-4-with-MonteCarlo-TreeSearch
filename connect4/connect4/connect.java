@@ -87,8 +87,8 @@ public class connect {
 		return copymoves();
 	}
 
-	public String show(){
-		return "Justplayed:" + String.valueOf(this.playerJustMoved) + "\n" + this.toString() + "\n";
+	public String show(String str, int move){
+		return str + " de jouer la colonne " + String.valueOf(move) + "\n" + this.toString() + "\n";
 	}
 
 	public double value(){
