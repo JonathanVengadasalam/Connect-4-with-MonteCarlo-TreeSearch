@@ -26,7 +26,7 @@ public class main {
 		boolean ask_order;
 		String order = new String();
 		int move = -1;
-		System.out.print("Vous êtes le joueur numéro : " + String.valueOf(manturn) + "\nL'ordinateur est le joueur numéro : " + String.valueOf(manturn*-1) + "\n\nPour jouer il faut choisir une colonne entre 1 et 7\n" + env.toString() + "\n");
+		System.out.print("Vous etes le joueur numero : " + String.valueOf(manturn) + "\nL'ordinateur est le joueur numero : " + String.valueOf(manturn*-1) + "\n\nPour jouer il faut choisir une colonne entre 1 et 7\n" + env.toString() + "\n");
 
 		while (continue_game){
 			if(env.playerJustMoved != manturn){
